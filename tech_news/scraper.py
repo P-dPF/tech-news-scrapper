@@ -1,11 +1,11 @@
 import requests
 import time
+from parsel import Selector
 
 # Requisito 1
 
 
 def fetch(url):
-    """Seu código deve vir aqui"""
     try:
         time.sleep(1)
         response = requests.get(
@@ -22,7 +22,11 @@ def fetch(url):
 
 # Requisito 2
 def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+    selector = Selector(text=html_content)
+    news_urls_list = selector.css(".entry-title > a::attr(href)").getall()
+    if not news_urls_list:
+        return []
+    return news_urls_list
 
 
 # Requisito 3
