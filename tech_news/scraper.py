@@ -84,6 +84,7 @@ def scrape_all_page_news(news_urls_list):
 
 # Requisito 5
 def get_tech_news(amount):
+    amount = int(amount)
     next_page_url = "https://blog.betrybe.com/"
     news_list = list()
 
