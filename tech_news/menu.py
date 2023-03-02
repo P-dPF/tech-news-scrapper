@@ -74,12 +74,13 @@ def analyzer_menu():
 
     menu_options = ["0", "1", "2", "3", "4", "5"]
 
-    if main_manu_selected_option not in menu_options:
-        return menu_functions_list[6]()
-
     if int(main_manu_selected_option) == 5:
         menu_functions_list[5]()
 
     while int(main_manu_selected_option) != 5:
-        menu_functions_list[int(main_manu_selected_option)]()
-        main_manu_selected_option = input(main_menu_options)
+        if main_manu_selected_option not in menu_options:
+            menu_functions_list[6]()
+            main_manu_selected_option = input(main_menu_options)
+        else:
+            menu_functions_list[int(main_manu_selected_option)]()
+            main_manu_selected_option = input(main_menu_options)
