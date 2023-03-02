@@ -51,11 +51,11 @@ def execute_menu_option_4():
 
 
 def execute_menu_option_5():
-    sys.stdout.write("Encerrando script\n")
+    sys.stdout.write("Closing script\n")
 
 
 def execute_invalid_menu_option():
-    sys.stderr.write("Opção inválida\n")
+    sys.stderr.write("Invalid option\n")
 
 
 menu_functions_list = [
