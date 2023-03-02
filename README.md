@@ -1,4 +1,6 @@
-[demo-scrapper.webm](https://user-images.githubusercontent.com/99831790/222552514-15f4a605-c88c-43bf-94fd-b9f5d54894f5.webm)
+[demo-scrapper.webm](https://user-images.githubusercontent.com/99831790/222552514-15f4a605-c88c-43bf-94fd-b9f5d54894f5.webm)  
+
+Watch the demonstration video above in fullscreen mode for a better view.
 
 ## DESCRIPTION
 
