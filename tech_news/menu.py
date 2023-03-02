@@ -9,28 +9,31 @@ from tech_news.analyzer.ratings import top_5_categories
 
 # Requisitos 11 e 12
 main_menu_options = (
-    "Selecione uma das opções a seguir:\n 0 - Popular o banco com notícias"
-    ";\n 1 - Buscar notícias por título;\n 2 - Buscar notícias por data;\n"
-    " 3 - Buscar notícias por categoria;\n "
-    "4 - Listar top 5 categorias;\n 5 - Sair."
+    "Choose one of the options below:\n 0 - Populate database with news"
+    ";\n 1 - Search news by title;\n 2 - Search news by date;\n"
+    " 3 - Search news by category;\n "
+    "4 - List top 5 categories;\n 5 - Exit.\n"
 )
 
 second_menu_options = [
-    "Digite quantas notícias serão buscadas:\n",
-    "Digite o título:\n",
-    "Digite a data no formato aaaa-mm-dd:\n",
-    "Digite a categoria:",
+    "Type in the amount of news to fetch:\n",
+    "Type in the title:\n",
+    "Type in the date in the format yyyy-mm-dd:\n",
+    "Type in the category:\n",
 ]
 
 
 def execute_menu_option_0():
     amount = input(second_menu_options[0])
-    return get_tech_news(amount)
+    print("Fetching news")
+    result = get_tech_news(amount)
+    print("News fetched!")
+    return result
 
 
 def exectute_menu_option_1():
     title = input(second_menu_options[1])
-    return search_by_title(title)
+    print(search_by_title(title))
 
 
 def exectute_menu_option_2():
@@ -77,4 +80,6 @@ def analyzer_menu():
     if int(main_manu_selected_option) == 5:
         menu_functions_list[5]()
 
-    return menu_functions_list[int(main_manu_selected_option)]()
+    while int(main_manu_selected_option) != 5:
+        menu_functions_list[int(main_manu_selected_option)]()
+        main_manu_selected_option = input(main_menu_options)
