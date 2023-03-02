@@ -1,3 +1,5 @@
+[demo-scrapper.webm](https://user-images.githubusercontent.com/99831790/222552514-15f4a605-c88c-43bf-94fd-b9f5d54894f5.webm)
+
 ## DESCRIPTION
 
 The Tech News Scrapper is a project written in Python that scrapes tech news from Trybe's news blog, processes them and saves them in a MongoDB instance run as a Docker container. The user can interact with the application through the terminal to scrape the desired number of news, as well as filter them.
